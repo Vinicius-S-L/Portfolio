@@ -1,0 +1,106 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&display=swap");
+
+:root {
+  --font-corpo-de-texto: "Inter", sans-serif;
+  --font-titulos: "Montserrat";
+  --cor-fundo-da-página: #0a0e17;
+  --cor-fundo-da-seções: #161b22;
+  --cor-Texto-Principal: #c9d1d9;
+  --cor-Subtítulos: #8b949e;
+  --cor-links-botões-Principal: #00d4ff;
+  --cor-links-botões-Secundário: #58a6ff;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cor-fundo-da-página);
+  color: var(--cor-Texto-Principal);
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 400;
+}
+
+header nav {
+  display: flex;
+  flex-flow: row nowrap;
+  padding: 20px;
+  width: 100%;
+  justify-content: space-evenly;
+
+}
+
+h1 {
+  font: italic 700 1.5 var(--font-titulos);
+}
+nav a {
+  color: var(--cor-links-botões-Principal);
+  text-decoration: none;
+}
+nav a:hover {
+  transition-duration: .5s;
+  transition-timing-function: ease;
+  background-color: #00d5ff81;
+  font-weight: 600;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  border-radius: 10px;
+  padding: 3px;
+}
+nav .noite {
+  display: none;
+}
+h2,
+h3 {
+  font:
+    700 1.5em "Montserrat",
+    sans-serif;
+  color: var(--cor-Subtítulos); /* ciano neon */
+  letter-spacing: 0.5px;
+}
+main {
+  display: grid;
+  grid-template: 1fr 1fr 1.5fr 2fr / 1fr;
+  padding: 20px;
+}
+section {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  box-shadow: 1px 2px 9px #00d4ff;
+  border-radius: 20px;
+  padding: 50px 50px;
+}
+section#ficha {
+  overflow: auto;
+  grid-area: 1 / 1 / 2 / 2;
+}
+section#ficha > #perfil {
+  height: 50%;
+  border-radius: 50%;
+}
+section#sobre {
+  grid-area: 2 / 1 / 3 / 2;
+}
+section#projetos {
+  grid-area: 3 / 1 / 4 / 2;
+}
+section#Linguagens {
+  grid-area: 4 / 1 / 5 / 2;
+  place-content: space-between;
+}
+p {
+  text-indent: 1em;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  margin: 10px 0;
+  grid-area: -2 / 1 / -1 / -1;
+}

@@ -24,6 +24,7 @@ body {
   color: var(--cor-Texto-Principal);
   font-family: "Inter", system-ui, sans-serif;
   font-weight: 400;
+  height: 100dvh;
 }
 
 header nav {
@@ -32,18 +33,13 @@ header nav {
   padding: 20px;
   width: 100%;
   justify-content: space-evenly;
-
-}
-
-h1 {
-  font: italic 700 1.5 var(--font-titulos);
 }
 nav a {
   color: var(--cor-links-botões-Principal);
   text-decoration: none;
 }
 nav a:hover {
-  transition-duration: .5s;
+  transition-duration: 0.5s;
   transition-timing-function: ease;
   background-color: #00d5ff81;
   font-weight: 600;
@@ -52,38 +48,63 @@ nav a:hover {
   border-radius: 10px;
   padding: 3px;
 }
-nav .noite {
+nav div.noite {
   display: none;
 }
-h2,
-h3 {
+h1,
+h2 {
   font:
     700 1.5em "Montserrat",
     sans-serif;
   color: var(--cor-Subtítulos); /* ciano neon */
   letter-spacing: 0.5px;
+  text-align: center;
+  display: inline;
+  padding-bottom: 30px;
+}
+p {
+  text-indent: 1em;
+  line-height: 1.6;
 }
 main {
   display: grid;
-  grid-template: 1fr 1fr 1.5fr 2fr / 1fr;
+  grid-template: auto 1fr 1fr 1fr 1fr / 1fr;
   padding: 20px;
 }
 section {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  
   box-shadow: 1px 2px 9px #00d4ff;
   border-radius: 20px;
-  padding: 50px 50px;
+  padding: 50px 20px;
 }
 section#ficha {
-  overflow: auto;
+  flex-flow: column nowrap;
+  align-items: center;
+
   grid-area: 1 / 1 / 2 / 2;
 }
 section#ficha > #perfil {
-  height: 50%;
+  width: 50%;
   border-radius: 50%;
 }
+section#ficha h1 {
+  display: block;
+  font-size: 1.3em;
+  padding: 25px 0;
+}
+section#ficha div#icon-ficha {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+section#ficha a {
+  color: white;
+}
+
 section#sobre {
   grid-area: 2 / 1 / 3 / 2;
 }
@@ -91,12 +112,11 @@ section#projetos {
   grid-area: 3 / 1 / 4 / 2;
 }
 section#Linguagens {
-  grid-area: 4 / 1 / 5 / 2;
+  grid-area: 5 / 1 / 6 / 2;
   place-content: space-between;
 }
-p {
-  text-indent: 1em;
-  line-height: 1.6;
+section#formacao {
+  grid-area: 4 / 1 / 5 / 2;
 }
 
 footer {

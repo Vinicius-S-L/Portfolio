@@ -28,6 +28,7 @@ h2 {
   letter-spacing: 0.5px;
   text-align: center;
   display: inline-block;
+  padding-bottom: 50px;
 }
 p {
   font-family: "Inter", system-ui, sans-serif;
@@ -43,7 +44,6 @@ li {
 Configurações Gerais e Variaveis em cima 
 
 */
-
 
 body {
   background-color: var(--cor-fundo-da-página);
@@ -98,9 +98,21 @@ section#ficha {
 
   grid-area: 1 / 1 / 2 / 2;
 }
+@keyframes borda-pulsante {
+  0% {
+    box-shadow: 0 0 5px var(--cor-links-botões-Principal); /* Início sutil */
+  }
+  50% {
+    box-shadow: 0 0 20px var(--cor-links-botões-Principal); /* Pico de brilho */
+  }
+  100% {
+    box-shadow: 0 0 5px var(--cor-links-botões-Principal); /* Volta ao início */
+  }
+}
 section#ficha > #perfil {
   width: 50%;
   border-radius: 50%;
+  animation: borda-pulsante 4s infinite ease-in-out; 
 }
 section#ficha h1 {
   display: block;

@@ -4,7 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="estilos/style.css" />
+    <meta
+      name="description"
+      content="Portfólio de Vinicius Silva de Lima - Desenvolvedor Web Full Stack em busca de estágio. HTML, CSS, JavaScript, Python e mais."
+    />
+    <meta name="author" content="Vinicius Silva de Lima" />
+    <meta
+      name="keywords"
+      content="desenvolvedor web, frontend, backend, estágio, HTML, CSS, JavaScript, Python"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <script
       src="https://kit.fontawesome.com/5d24c194ea.js"
       crossorigin="anonymous"
@@ -13,28 +22,24 @@
   <body>
     <header>
       <nav id="menu">
-        <div>
-          <i class="fa-solid fa-circle-info"></i>
-          <a href="#sobre" tabindex="#sobre">Sobre</a>
-        </div>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#projetos">Projetos</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#tecnologias">Tecnologias</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+        <i class="fa-solid fa-bars" id="botao-menu"></i>
 
-        <div>
-          <i class="fa-solid fa-screwdriver-wrench"></i>
-          <a href="#projetos" tabindex="#projetos">Projetos</a>
-        </div>
-        <div>
-          <i class="fa-solid fa-phone"></i>
-          <a href="#contado" tabindex="#contado">Contado</a>
-        </div>
         <div class="modo">
-          <div class="dia"><i class="fa-regular fa-sun"></i></div>
-          <div class="noite"><i class="fa-solid fa-moon"></i></div>
+          <i class="fa-regular fa-sun" id="modo-claro"></i>
+          <i class="fa-solid fa-moon" id="modo-escuro"></i>
         </div>
       </nav>
     </header>
     <main id="conteudo">
       <section id="indentificação">
-        <img src="imagens/perfil.png" id="perfil" alt="Minha Foto" />
+        <img src="assets/imagens/perfil.png" id="perfil" alt="Minha Foto" />
         <h1>Vinicius Silva de Lima</h1>
         <div id="icon-ficha">
           <a href="https://www.linkedin.com/in/vinicius-silva-13612b305/"
@@ -86,8 +91,8 @@
           combinando com conhecimentos em backend (Python/SQL) e infraestrutura.
         </p>
       </section>
-      <section id="Linguagens" class="animation">
-        <h2>Linguagens</h2>
+      <section id="tecnologias" class="animation">
+        <h2>Tecnologias</h2>
         <div class="frontend">
           <ol>
             <li class="Linguagens">JavaScript</li>
@@ -116,6 +121,6 @@
         </div>
       </section>
     </main>
-    <script src="scripts/script.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
